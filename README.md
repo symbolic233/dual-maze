@@ -1,8 +1,8 @@
-# (TODO: your game's title)
+# Dual Maze
 
-Author: (TODO: your name)
+Author: Yoseph Mak
 
-Design: (TODO: In two sentences or fewer, describe what is new and interesting about your game.)
+Design: This is a maze game where you control two icons at the same time. Both of them respond to the same set of inpus.
 
 Screen Shot:
 
