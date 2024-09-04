@@ -21,13 +21,19 @@ struct PlayMode : Mode {
 	struct Button {
 		uint8_t downs = 0;
 		uint8_t pressed = 0;
+		uint8_t previous = 0;
 	} left, right, down, up;
 
-	//some weird background animation:
-	float background_fade = 0.0f;
+	//player positions:
+	glm::vec2 player1_at = glm::vec2(0.0f);
+	glm::vec2 player2_at = glm::vec2(0.0f);
 
-	//player position:
-	glm::vec2 player_at = glm::vec2(0.0f);
+	uint32_t current_level = 1;
+
+	struct Player {
+		uint32_t position = 0;
+		uint32_t goal = 0;
+	} p1, p2;
 
 	//----- drawing handled by PPU466 -----
 
