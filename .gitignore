@@ -8,7 +8,7 @@ dist/game
 dist/game.exe
 maek-cache.json
 maek-converter-cache.json
-convert_levels.exe
-convert_levels.pdb
-SDL2.dll
+dist/convert_levels.exe
+dist/convert_levels.pdb
+output_of_asset_gen/
 .vscode/

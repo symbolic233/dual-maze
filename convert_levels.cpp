@@ -6,7 +6,9 @@
 #include "Level.hpp"
 #include "data_path.hpp"
 
-// note: some stream reading inspiration taken from https://stackoverflow.com/questions/7868936/read-file-line-by-line-using-ifstream-in-c
+// Note: some stream reading inspiration taken from https://stackoverflow.com/questions/7868936/read-file-line-by-line-using-ifstream-in-c
+// Some read/write framework inspiration taken from https://15466.courses.cs.cmu.edu/lesson/assets
+
 void write_text(const Level &level, std::ostream *to_) {
     auto &to = *to_;
     to.write(reinterpret_cast<char const*>(&level.rows), 4);
