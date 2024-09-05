@@ -63,7 +63,6 @@ void PlayMode::update_level(uint32_t i) {
 	}
 	uint32_t start_x = PPU466::BackgroundWidth / 4 - current_lvl.cols / 2;
 	uint32_t start_y = PPU466::BackgroundHeight / 4 - current_lvl.rows / 2;
-	// let's build the background now!
 	for (uint32_t y = 0; y < current_lvl.rows; ++y) {
 		for (uint32_t x = 0; x < current_lvl.cols; ++x) {
 			uint32_t xpos = start_x + x;

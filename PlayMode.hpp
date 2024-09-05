@@ -31,7 +31,7 @@ struct PlayMode : Mode {
 	glm::vec2 player2_at = glm::vec2(0.0f);
 
 	uint32_t lnum = 1;
-	uint32_t max_levels = 3;
+	uint32_t max_levels = 11;
 
 	struct Player {
 		uint32_t position = 0;
