@@ -18,6 +18,8 @@ The second and more important part is the level assets. Each level is initially 
 
 The file [convert_levels.cpp](convert_levels.cpp) converts the text files to my .level asset format. I could've chosen to have all the levels be in a single file, but this method was easier and saves me work when the levels don't store any additional info. Each .level stores the puzzle dimensions, the start and goal positions for each icon, and the entire layout of the puzzle. In [Level.cpp](Level.cpp) there is conversion code for the .level files to and from the actual Level objects which contain all of this information. I don't actually use Level.cpp's functions, but they're there for reference in the files where I do use similar code to get the job done.
 
+Compiling convert_levels.cpp witih the proper dependencies via [Maekfile-converter.js](Maekfile-converter.js) produces dist/convert_levels.exe which (re-)makes the assets when run.
+
 The Level objects are used in [PlayMode.cpp](PlayMode.cpp) where the level layouts are drawn in to the PPU.
 
 How To Play:
@@ -30,3 +32,4 @@ Credits:
 - The [course website](http://graphics.cs.cmu.edu/courses/15-466-f24)
 - Jude Markabawi for the [tileset asset generator](asset_gen.py)
 - https://keesiemeijer.github.io/maze-generator/ for inspiration on level 8, though I made the corresponding asset itself on my own
+- Other citations within files are provided when needed.
