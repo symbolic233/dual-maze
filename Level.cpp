@@ -10,7 +10,6 @@
 
 void write_level(const Level &level, std::ostream *to_) {
     auto &to = *to_;
-    // std::cout << "Write in progress" << std::endl;
     to.write(reinterpret_cast<char const*>(&level.rows), 4);
     to.write(reinterpret_cast<char const*>(&level.cols), 4);
     to.write(reinterpret_cast<char const*>(&level.red_start), 4);
@@ -18,7 +17,6 @@ void write_level(const Level &level, std::ostream *to_) {
     to.write(reinterpret_cast<char const*>(&level.blue_start), 4);
     to.write(reinterpret_cast<char const*>(&level.blue_end), 4);
     to.write(level.walls.data(), level.rows * level.cols);
-    // std::cout << "Finished" << std::endl;
 }
 
 void read_level(std::istream &from, Level *level) {

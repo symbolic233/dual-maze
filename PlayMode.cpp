@@ -228,25 +228,7 @@ bool PlayMode::handle_event(SDL_Event const &evt, glm::uvec2 const &window_size)
 
 void PlayMode::update(float elapsed) {
 
-	// constexpr float TileChange = 8.0f;
-	
-	/*if (left.pressed) {
-		player1_at.x -= TileChange;
-		player2_at.x -= TileChange;
-	}
-	if (right.pressed) {
-		player1_at.x += TileChange;
-		player2_at.x += TileChange;
-	}
-	if (down.pressed) {
-		player1_at.y -= TileChange;
-		player2_at.y -= TileChange;
-	}
-	if (up.pressed) {
-		player1_at.y += TileChange;
-		player2_at.y += TileChange;
-	}*/
-
+	// Update level if the player won this level
 	if ((p1.position == p1.goal) && (p2.position == p2.goal) && lnum != max_levels) {
 		lnum++;
 		update_level(lnum);
