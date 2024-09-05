@@ -207,6 +207,22 @@ bool PlayMode::handle_event(SDL_Event const &evt, glm::uvec2 const &window_size)
 			}
 			return true;
 		}
+		else if (evt.key.keysym.sym == SDLK_BACKSPACE) {
+			uint32_t start_x = PPU466::BackgroundWidth / 4 - current_lvl.cols / 2;
+			uint32_t start_y = PPU466::BackgroundHeight / 4 - current_lvl.rows / 2;
+			uint32_t p1x = current_lvl.red_start % current_lvl.cols;
+			uint32_t p1y = current_lvl.red_start / current_lvl.cols;
+			uint32_t p2x = current_lvl.blue_start % current_lvl.cols;
+			uint32_t p2y = current_lvl.blue_start / current_lvl.cols;
+
+			player1_at.x = 8.0f * (start_x + p1x);
+			player1_at.y = 8.0f * (start_y + p1y);
+			player2_at.x = 8.0f * (start_x + p2x);
+			player2_at.y = 8.0f * (start_y + p2y);
+
+			p1.position = current_lvl.red_start;
+			p2.position = current_lvl.blue_start;
+		}
 	} else if (evt.type == SDL_KEYUP) {
 		if (evt.key.keysym.sym == SDLK_LEFT) {
 			left.pressed = false;
