@@ -4,7 +4,7 @@ Author: Yoseph Mak
 
 Design: This is a puzzle game where you control two icons at the same time. Both of them respond to the same set of inputs, so some thought is required when orienting both icons.
 
-There are 9 levels, and the difficulty increases roughly with each level. Getting both icons to their goal positions immediately takes you to the next level.
+There are 9 levels, roughly increasing in difficulty. Getting both icons to their goal positions immediately takes you to the next level.
 
 Screen Shot:
 
@@ -31,5 +31,4 @@ This game was built with [NEST](NEST.md).
 Credits:
 - The [course website](http://graphics.cs.cmu.edu/courses/15-466-f24)
 - Jude Markabawi for the [tileset asset generator](asset_gen.py)
-- https://keesiemeijer.github.io/maze-generator/ for inspiration on level 8, though I made the corresponding asset itself on my own
 - Other citations within files are provided when needed.
