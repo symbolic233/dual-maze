@@ -4,11 +4,11 @@ Author: Yoseph Mak
 
 Design: This is a puzzle game where you control two icons at the same time. Both of them respond to the same set of inputs, so some thought is required when orienting both icons.
 
-There are 9 levels, roughly increasing in difficulty. Getting both icons to their goal positions immediately takes you to the next level.
+There are 10 levels, roughly increasing in difficulty. Getting both icons to their goal positions immediately takes you to the next level.
 
 Screen Shot:
 
-![Screen Shot of Level 8](screenshot.png)
+![Screen Shot of Level 9](screenshot.png)
 
 How Your Asset Pipeline Works:
 
