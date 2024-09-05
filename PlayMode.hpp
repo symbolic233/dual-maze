@@ -15,6 +15,8 @@ struct PlayMode : Mode {
 	virtual void update(float elapsed) override;
 	virtual void draw(glm::uvec2 const &drawable_size) override;
 
+	void update_level(uint32_t i);
+
 	//----- game state -----
 
 	//input tracking:
@@ -28,7 +30,8 @@ struct PlayMode : Mode {
 	glm::vec2 player1_at = glm::vec2(0.0f);
 	glm::vec2 player2_at = glm::vec2(0.0f);
 
-	uint32_t current_level = 1;
+	uint32_t lnum = 1;
+	uint32_t max_levels = 3;
 
 	struct Player {
 		uint32_t position = 0;

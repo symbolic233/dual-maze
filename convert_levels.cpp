@@ -20,6 +20,10 @@ void write_text(const Level &level, std::ostream *to_) {
     to.write(level.walls.data(), level.rows * level.cols);
 }
 
+uint32_t convert_position(int r, int c, int i) {
+    return i % c + (r - i / c - 1) * c;
+}
+
 int main() {
     uint32_t lnum = 1;
     std::ifstream infile(data_path("../assets/level" + std::to_string(lnum) + ".txt"));
@@ -33,37 +37,37 @@ int main() {
             infile.get(c);
             switch (c) {
                 case '#':
-                    next.walls[i] = 0b01;
+                    next.walls[convert_position(next.rows, next.cols, i)] = 0b01;
                     break;
                 case '.':
                     break;
                 case 'r':
-                    next.red_start = i;
+                    next.red_start = convert_position(next.rows, next.cols, i);
                     break;
                 case 'R':
-                    next.red_end = i;
+                    next.red_end = convert_position(next.rows, next.cols, i);
                     break;
                 case 'b':
-                    next.blue_start = i;
+                    next.blue_start = convert_position(next.rows, next.cols, i);
                     break;
                 case 'B':
-                    next.blue_end = i;
+                    next.blue_end = convert_position(next.rows, next.cols, i);
                     break;
                 case '3':
-                    next.red_start = i;
-                    next.red_end = i;
+                    next.red_start = convert_position(next.rows, next.cols, i);
+                    next.red_end = convert_position(next.rows, next.cols, i);
                     break;
                 case '2':
-                    next.blue_start = i;
-                    next.red_end = i;
+                    next.blue_start = convert_position(next.rows, next.cols, i);
+                    next.red_end = convert_position(next.rows, next.cols, i);
                     break;
                 case '1':
-                    next.red_start = i;
-                    next.blue_end = i;
+                    next.red_start = convert_position(next.rows, next.cols, i);
+                    next.blue_end = convert_position(next.rows, next.cols, i);
                     break;
                 case '0':
-                    next.blue_start = i;
-                    next.blue_end = i;
+                    next.blue_start = convert_position(next.rows, next.cols, i);
+                    next.blue_end = convert_position(next.rows, next.cols, i);
                     break;
                 default:
                     i--;
