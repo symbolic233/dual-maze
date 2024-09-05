@@ -24,7 +24,7 @@ The Level objects are used in [PlayMode.cpp](PlayMode.cpp) where the level layou
 
 How To Play:
 
-Simply use the arrow keys. Both the red and blue icons will move if possible in the direction according to that arrow key. However, if there is a wall blocking an icon, the icon will not move. This idea can often be used to realign how far apart the icons are, which is very important to solving a few levels.
+Simply use the arrow keys. Both the red and blue icons will move if possible in the direction according to that arrow key. However, if there is a wall (or the other icon!) blocking an icon, the icon will not move. This idea can often be used to realign how far apart the icons are, which is very important to solving a few levels.
 
 If you get stuck, you can press backspace to reset the level.
 
